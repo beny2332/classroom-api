@@ -1,6 +1,6 @@
 import { Schema, model, Document } from 'mongoose';
 
-interface IGrade extends Document {
+export interface IGrade extends Document {
   studentId: Schema.Types.ObjectId;
   classId: Schema.Types.ObjectId;
   name: string;
@@ -8,7 +8,7 @@ interface IGrade extends Document {
   grade: number;
 }
 
-const gradeSchema = new Schema<IGrade>({
+export const gradeSchema = new Schema<IGrade>({
   studentId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   classId: { type: Schema.Types.ObjectId, ref: 'Class', required: true },
   name: { type: String, required: true },
