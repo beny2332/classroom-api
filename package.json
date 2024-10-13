@@ -2,9 +2,11 @@
   "name": "blog-platform",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon src/app.ts",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
